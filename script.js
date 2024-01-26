@@ -9,17 +9,21 @@ document.addEventListener("DOMContentLoaded", function () {
             navLinks.forEach(navLink => navLink.classList.remove('active'));
             link.classList.add('active');
 
-            // Smoothly scroll to the targeted section
+            // Smoothly scroll to the targeted section for modern browsers
             const targetId = link.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+            const targetElement = document.getElementById(targetId) || document.getElementById(targetId.toLowerCase());
 
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop,
+            if (targetElement && 'scrollBehavior' in document.documentElement.style) {
+                targetElement.scrollIntoView({
                     behavior: 'smooth'
                 });
             } else {
-                console.error('Target element not found!');
+                // Fallback for browsers that do not support scroll-behavior
+                const targetPosition = targetElement.offsetTop;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
     });
