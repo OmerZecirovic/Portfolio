@@ -28,3 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+function downloadCV() {
+    var link = document.createElement('a');
+    link.href = 'assets/Omer Zecirovic CV.pdf';
+    link.download = 'Omer Zecirovic CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
