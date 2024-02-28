@@ -280,6 +280,10 @@ html, body {
     font-size: 1.5rem;
 }
 
+nav {
+    display: block;
+}
+
 /* Welcome section styles */
 .welcome-section {
     height: 100vh;
