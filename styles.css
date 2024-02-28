@@ -257,7 +257,7 @@ html, body {
     scroll-behavior: smooth;
     margin: 0;
     font-family: 'Arial', sans-serif;
-    padding: 0;
+    padding: 10px;
     --s: 5vw; /* Adjust units for responsiveness */
     --c: #191b22;
     --_s: calc(2 * var(--s)) calc(2 * var(--s));
