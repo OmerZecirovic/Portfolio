@@ -105,14 +105,13 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: fit-content;
-    margin: auto; 
+    margin: 20px;
     height: 100vh;
     gap: 200px;
 }
 
 .my-text1 h1 {
-    flex: 1; /* Allow the text to take remaining space */
+    flex: 0.5; 
     font-size: 2rem;
     color: white;
 }
@@ -168,6 +167,7 @@ html, body {
 
 
 .my-skills {
+    display: block;
     color: white;
     padding: 80px 0; /* Adjust spacing as needed */
     text-align: center;
