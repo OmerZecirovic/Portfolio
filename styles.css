@@ -281,7 +281,7 @@ html, body {
 }
 
 .navbar {
-    display: block;
+    display: hidden;
 }
 
 /* Welcome section styles */
